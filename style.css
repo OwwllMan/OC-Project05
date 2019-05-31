@@ -59,12 +59,12 @@ box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.27);
 
 .main_div{
 	padding-top:20px;
-	height:250px;
+	height:750px;
 	text-align:center;
 	background-color:#eaeaea;
 	width:600px;
 	margin:auto;
-	margin-top:200px;
+	margin-top:100px;
 	border-radius:5px;
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);

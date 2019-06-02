@@ -4,6 +4,8 @@ var aleaA = null;
 var citationPart1 = ["Citation1.1", "Citation1.2", "Citation1.3"];
 var citationPart2 = ["Citation2.1", "Citation2.2", "Citation2.3"];
 var citationPart3 = ["Citation3.1", "Citation3.2", "Citation3.3"];
+var emojiButton = ["🤣", "😍","😎","😜","😅","🤠"];
+
 var auteurs = ["Auteur1", "Auteur2", "Auteur3"];
 var userNbText = 'Choissisez un nombre entre 1 et 5';
 
@@ -14,10 +16,12 @@ $('document').ready(function(){
 
 	$('#generer').click(function(){
 
-			document.getElementById("generer").innerHTML = 'Générer encore ?';
 			userChose = input[0].value;
-			if ((userChose <= 1)  || (userChose <= 5)){
+			if ((userChose >= 1)  || (userChose <= 5)){
 
+				aleaBtn = Math.floor(Math.random() * emojiButton.length);
+				emojiBtn = emojiButton[aleaBtn];
+				document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
 				console.log("L'utilisateur a choisit de générer " + userChose + " citation(s)");
 
 				if (userChose == 1){

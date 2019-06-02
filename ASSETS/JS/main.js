@@ -1,4 +1,3 @@
-
 var citation = null;
 var aleaA = null;
 
@@ -6,17 +5,18 @@ var citationPart1 = ["Citation1.1", "Citation1.2", "Citation1.3"];
 var citationPart2 = ["Citation2.1", "Citation2.2", "Citation2.3"];
 var citationPart3 = ["Citation3.1", "Citation3.2", "Citation3.3"];
 var auteurs = ["Auteur1", "Auteur2", "Auteur3"];
-
-var userNbText = 'Choissisez un nombre entre 1 et 6';
+var userNbText = 'Choissisez un nombre entre 1 et 5';
 
 
 $('document').ready(function(){
 
+	var input = document.querySelectorAll('input');
 
 	$('#generer').click(function(){
 
-			userChose = prompt(userNbText);
-			if ((userChose < 0)  || (userChose <= 5)){
+			document.getElementById("generer").innerHTML = 'Générer encore ?';
+			userChose = input[0].value;
+			if ((userChose <= 1)  || (userChose <= 5)){
 
 				console.log("L'utilisateur a choisit de générer " + userChose + " citation(s)");
 
@@ -36,6 +36,12 @@ $('document').ready(function(){
 					       arrayAut.push(auteur)
 					       i++
 						}
+
+						$('.container_citation1').removeClass("hide");
+						$('.container_citation2').addClass("hide");
+						$('.container_citation3').addClass("hide");
+						$('.container_citation4').addClass("hide");
+						$('.container_citation5').addClass("hide");
 
 						$('.citation1').html(arrayCita[0]);
 						$('.auteur1').html(arrayAut[0]);
@@ -59,6 +65,11 @@ $('document').ready(function(){
 					       arrayAut.push(auteur)
 					       i++
 						}
+						$('.container_citation1').removeClass("hide");
+						$('.container_citation2').removeClass("hide");
+						$('.container_citation3').addClass("hide");
+						$('.container_citation4').addClass("hide");
+						$('.container_citation5').addClass("hide");
 
 						$('.citation1').html(arrayCita[0]);
 						$('.citation2').html(arrayCita[1]);
@@ -82,6 +93,13 @@ $('document').ready(function(){
 					       arrayAut.push(auteur)
 					       i++
 						}
+
+						$('.container_citation1').removeClass("hide");
+						$('.container_citation2').removeClass("hide");
+						$('.container_citation3').removeClass("hide");
+						$('.container_citation4').addClass("hide");
+						$('.container_citation5').addClass("hide");
+
 
 						$('.citation1').html(arrayCita[0]);
 						$('.citation2').html(arrayCita[1]);
@@ -108,6 +126,11 @@ $('document').ready(function(){
 					       arrayAut.push(auteur)
 					       i++
 						}
+						$('.container_citation1').removeClass("hide");
+						$('.container_citation2').removeClass("hide");
+						$('.container_citation3').removeClass("hide");
+						$('.container_citation4').removeClass("hide");
+						$('.container_citation5').addClass("hide");
 
 						$('.citation1').html(arrayCita[0]);
 						$('.citation2').html(arrayCita[1]);
@@ -137,6 +160,13 @@ $('document').ready(function(){
 					       i++
 						}
 
+						$('.container_citation1').removeClass("hide");
+						$('.container_citation2').removeClass("hide");
+						$('.container_citation3').removeClass("hide");
+						$('.container_citation4').removeClass("hide");
+						$('.container_citation5').removeClass("hide");
+
+						
 						$('.citation1').html(arrayCita[0]);
 						$('.citation2').html(arrayCita[1]);
 						$('.citation3').html(arrayCita[2]);
@@ -148,15 +178,20 @@ $('document').ready(function(){
 						$('.auteur4').html(arrayAut[3]);
 						$('.auteur5').html(arrayAut[4]);
 							//Ouais je sais c'est pas super propre ^^
-				}else{}
+				} else {
+
+				}
 
 
 
+			} else if (userChose <= 0) {
+				alert("Merci de choisir un nombre entre 1 et 5");
+				console.log("L'utilisateur a choisit un  nombre négaif");
 			} else {
-				alert("Merci de choisir un nombre entre 1 et 6");
+				alert("Merci de choisir un nombre entre 1 et 5");
 				console.log("L'utilisateur a choisit un mauvais nombre");
 			}
-
+			
 	});
 
 

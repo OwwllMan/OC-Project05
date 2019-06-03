@@ -1,13 +1,11 @@
 var citation = null;
 var aleaA = null;
 
-var citationPart1 = ["Citation1.1", "Citation1.2", "Citation1.3"];
-var citationPart2 = ["Citation2.1", "Citation2.2", "Citation2.3"];
-var citationPart3 = ["Citation3.1", "Citation3.2", "Citation3.3"];
+var citationPart1 = ["Le sentiment de", "Un seul être", "La nature fait les", "Dans la vengeance", "Exige beaucoup de toi-même"];
+var citationPart2 = ["pas être aimé", " vous manque et ", "hommes semblables,", "et en amour", "et attends peu des autres"];
+var citationPart3 = ["est la plus grande des pauvretés.", "tout est dépeuplé.", "la vie les rend différents.", "la femme est plus barbare que l'homme.", " Ainsi beaucoup d'ennuis te seront épargnés."];
+var auteurs = ["Confucius", "Jean-Paul Sartre", "Gandhi", "Victor Hugo", "Albert Einstein", "Coluche", "Friedrich Nietzsche", "Oscar Wilde", "Lamartine", "Mère Teresa"];
 var emojiButton = ["🤣", "😍","😎","😜","😅","🤠"];
-
-var auteurs = ["Auteur1", "Auteur2", "Auteur3"];
-var userNbText = 'Choissisez un nombre entre 1 et 5';
 
 
 $('document').ready(function(){
@@ -22,6 +20,8 @@ $('document').ready(function(){
 				aleaBtn = Math.floor(Math.random() * emojiButton.length);
 				emojiBtn = emojiButton[aleaBtn];
 				document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
+				document.getElementById("generer").innerHTML = "Generate another? " + emojiBtn;
+
 				console.log("L'utilisateur a choisit de générer " + userChose + " citation(s)");
 
 				if (userChose == 1){
@@ -196,6 +196,16 @@ $('document').ready(function(){
 				console.log("L'utilisateur a choisit un mauvais nombre");
 			}
 			
+	});
+
+	$('.frflag').click(function(){
+		$(".UK").addClass("hide");
+		$(".FR").removeClass("hide");
+	});
+
+	$('.ukflag').click(function(){
+		$(".FR").addClass("hide");
+		$(".UK").removeClass("hide");
 	});
 
 

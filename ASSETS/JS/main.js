@@ -11,10 +11,10 @@ var auteurs = ["Confucius", "Jean-Paul Sartre", "Gandhi", "Victor Hugo", "Albert
 
 var quote = null;
 var aleaAu = null;
-var quotePart1 = ["Le sentiment de", "Un seul être", "La nature fait les", "Dans la vengeance", "Exige beaucoup de toi-même"];
-var quotePart2 = ["pas être aimé", " vous manque et ", "hommes semblables,", "et en amour", "et attends peu des autres"];
-var quotePart3 = ["est la plus grande des pauvretés.", "tout est dépeuplé.", "la vie les rend différents.", "la femme est plus barbare que l'homme.", " Ainsi beaucoup d'ennuis te seront épargnés."];
-var authors = ["Confucius", "Jean-Paul Sartre", "Gandhi", "Victor Hugo", "Albert Einstein", "Coluche", "Friedrich Nietzsche", "Oscar Wilde", "Lamartine", "Mère Teresa"];
+var quotePart1 = ["His Majesty's", "England is", "London is", "The House of Lords", "In England I would rather be"];
+var quotePart2 = ["dominions, on which", " my thoughts remain below", "a roost ", " is like a glass of champagne", "a man, a horse, a dog"];
+var quotePart3 = ["the sun never sets", "a nation of voyeurs.", "for every bird.", "that has stood for 5 days.", ", in that order."];
+var authors = ["David Lloyd George", "Edmund C. Bentley", "Dean Acheson", "Christopher North", "Charles Lamb", "Rupert Brooke", "Friedrich Nietzsche", "George Bernard Shaw", "Frank Field", "Benjamin Disraeli"];
 
 
 

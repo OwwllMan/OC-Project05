@@ -1,10 +1,23 @@
+// VAR FR 
+
 var citation = null;
 var aleaA = null;
-
 var citationPart1 = ["Le sentiment de", "Un seul être", "La nature fait les", "Dans la vengeance", "Exige beaucoup de toi-même"];
 var citationPart2 = ["pas être aimé", " vous manque et ", "hommes semblables,", "et en amour", "et attends peu des autres"];
 var citationPart3 = ["est la plus grande des pauvretés.", "tout est dépeuplé.", "la vie les rend différents.", "la femme est plus barbare que l'homme.", " Ainsi beaucoup d'ennuis te seront épargnés."];
 var auteurs = ["Confucius", "Jean-Paul Sartre", "Gandhi", "Victor Hugo", "Albert Einstein", "Coluche", "Friedrich Nietzsche", "Oscar Wilde", "Lamartine", "Mère Teresa"];
+
+//VAR UK
+
+var quote = null;
+var aleaAu = null;
+var quotePart1 = ["Le sentiment de", "Un seul être", "La nature fait les", "Dans la vengeance", "Exige beaucoup de toi-même"];
+var quotePart2 = ["pas être aimé", " vous manque et ", "hommes semblables,", "et en amour", "et attends peu des autres"];
+var quotePart3 = ["est la plus grande des pauvretés.", "tout est dépeuplé.", "la vie les rend différents.", "la femme est plus barbare que l'homme.", " Ainsi beaucoup d'ennuis te seront épargnés."];
+var authors = ["Confucius", "Jean-Paul Sartre", "Gandhi", "Victor Hugo", "Albert Einstein", "Coluche", "Friedrich Nietzsche", "Oscar Wilde", "Lamartine", "Mère Teresa"];
+
+
+
 var emojiButton = ["🤣", "😍","😎","😜","😅","🤠"];
 
 
@@ -19,12 +32,12 @@ $('document').ready(function(){
 
 				aleaBtn = Math.floor(Math.random() * emojiButton.length);
 				emojiBtn = emojiButton[aleaBtn];
-				document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
-				document.getElementById("generer").innerHTML = "Generate another? " + emojiBtn;
 
 				console.log("L'utilisateur a choisit de générer " + userChose + " citation(s)");
 
 				if (userChose == 1){
+
+						document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
 						var arrayCita = [];
 						var arrayAut = [];
 						var i = 0;
@@ -54,6 +67,8 @@ $('document').ready(function(){
 				}else{}
 
 				if (userChose == 2){
+
+						document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
 						var arrayCita = [];
 						var arrayAut = [];
 						var i = 0;
@@ -82,6 +97,8 @@ $('document').ready(function(){
 				}else{}
 
 				if (userChose == 3){
+
+						document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
 						var arrayCita = [];
 						var arrayAut = [];
 						var i = 0;
@@ -115,6 +132,8 @@ $('document').ready(function(){
 				}else{}
 
 				if (userChose == 4){
+
+						document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
 						var arrayCita = [];
 						var arrayAut = [];
 						var i = 0;
@@ -148,6 +167,8 @@ $('document').ready(function(){
 				}else{}
 
 				if (userChose == 5){
+
+						document.getElementById("generer").innerHTML = "En générer d'autre ? " + emojiBtn;
 						var arrayCita = [];
 						var arrayAut = [];
 						var i = 0;
@@ -182,10 +203,8 @@ $('document').ready(function(){
 						$('.auteur4').html(arrayAut[3]);
 						$('.auteur5').html(arrayAut[4]);
 							//Ouais je sais c'est pas super propre ^^
-				} else {
-
-				}
-
+				} else {}
+	
 
 
 			} else if (userChose <= 0) {
@@ -195,8 +214,218 @@ $('document').ready(function(){
 				alert("Merci de choisir un nombre entre 1 et 5");
 				console.log("L'utilisateur a choisit un mauvais nombre");
 			}
+
+	});
+
+			$('#generate').click(function(){
+				
+				userChose = input[1].value;
+				if ((userChose >= 1)  || (userChose <= 5)){
+	
+					aleaBtn = Math.floor(Math.random() * emojiButton.length);
+					emojiBtn = emojiButton[aleaBtn];
+	
+					console.log("L'utilisateur a choisit de générer " + userChose + " citation(s)");
+	
+					if (userChose == 1){
+
+							document.getElementById("generate").innerHTML = "Generate another ? " + emojiBtn;
+							var arrayQuote = [];
+							var arrayAuthor = [];
+							var i = 0;
+
+							while(i!=1){
+
+							   aleaQ1 = Math.floor(Math.random() * quotePart1.length);
+							   aleaQ2 = Math.floor(Math.random() * quotePart2.length);
+							   aleaQ3 = Math.floor(Math.random() * quotePart3.length);
+							   aleaAu = Math.floor(Math.random() * authors.length);
+							   var quote = quotePart1[aleaQ1] + " " + quotePart2[aleaQ2] + " " + quotePart3[aleaQ3];
+							   var author = authors[aleaAu];
+	
+							   arrayQuote.push(quote)
+							   arrayAuthor.push(author)
+							   i++
+							}
+	
+							$('.container_quote1').removeClass("hide");
+							$('.container_quote2').addClass("hide");
+							$('.container_quote3').addClass("hide");
+							$('.container_quote4').addClass("hide");
+							$('.container_quote5').addClass("hide");
+	
+							$('.quote1').html(arrayQuote[0]);
+							$('.author1').html(arrayAuthor[0]);
+	
+	
+					}else{}
+	
+					if (userChose == 2){
+
+							document.getElementById("generate").innerHTML = "Generate another ? " + emojiBtn;
+							var arrayQuote = [];
+							var arrayAuthor = [];
+							var i = 0;
+							
+							while(i!=2){
+
+							   aleaQ1 = Math.floor(Math.random() * quotePart1.length);
+							   aleaQ2 = Math.floor(Math.random() * quotePart2.length);
+							   aleaQ3 = Math.floor(Math.random() * quotePart3.length);
+							   aleaAu = Math.floor(Math.random() * authors.length);
+							   var quote = quotePart1[aleaQ1] + " " + quotePart2[aleaQ2] + " " + quotePart3[aleaQ3];
+							   var author = authors[aleaAu];
+	
+							   arrayQuote.push(quote)
+							   arrayAuthor.push(author)
+							   i++
+							}
+
+							$('.container_quote1').removeClass("hide");
+							$('.container_quote2').removeClass("hide");
+							$('.container_quote3').addClass("hide");
+							$('.container_quote4').addClass("hide");
+							$('.container_quote5').addClass("hide");
+
+							$('.quote1').html(arrayQuote[0]);
+							$('.quote2').html(arrayQuote[1]);
+							$('.author1').html(arrayAuthor[0]);
+							$('.author2').html(arrayAuthor[1]);
+
+					}else{}
+	
+					if (userChose == 3){
+
+							document.getElementById("generate").innerHTML = "Generate another ? " + emojiBtn;
+							var arrayQuote = [];
+							var arrayAuthor = [];
+							var i = 0;
+							
+							while(i!=3){
+
+							   aleaQ1 = Math.floor(Math.random() * quotePart1.length);
+							   aleaQ2 = Math.floor(Math.random() * quotePart2.length);
+							   aleaQ3 = Math.floor(Math.random() * quotePart3.length);
+							   aleaAu = Math.floor(Math.random() * authors.length);
+							   var quote = quotePart1[aleaQ1] + " " + quotePart2[aleaQ2] + " " + quotePart3[aleaQ3];
+							   var author = authors[aleaAu];
+	
+							   arrayQuote.push(quote)
+							   arrayAuthor.push(author)
+							   i++
+							}
+	
+							$('.container_quote1').removeClass("hide");
+							$('.container_quote2').removeClass("hide");
+							$('.container_quote3').removeClass("hide");
+							$('.container_quote4').addClass("hide");
+							$('.container_quote5').addClass("hide");
+	
+	
+							$('.quote1').html(arrayQuote[0]);
+							$('.quote2').html(arrayQuote[1]);
+							$('.quote3').html(arrayQuote[2]);
+							$('.author1').html(arrayAuthor[0]);
+							$('.author2').html(arrayAuthor[1]);
+							$('.author3').html(arrayAuthor[2]);
+
+	
+					}else{}
+	
+					if (userChose == 4){
+
+						document.getElementById("generate").innerHTML = "Generate another ? " + emojiBtn;
+						var arrayQuote = [];
+						var arrayAuthor = [];
+						var i = 0;
+						
+						while(i!=4){
+
+						   aleaQ1 = Math.floor(Math.random() * quotePart1.length);
+						   aleaQ2 = Math.floor(Math.random() * quotePart2.length);
+						   aleaQ3 = Math.floor(Math.random() * quotePart3.length);
+						   aleaAu = Math.floor(Math.random() * authors.length);
+						   var quote = quotePart1[aleaQ1] + " " + quotePart2[aleaQ2] + " " + quotePart3[aleaQ3];
+						   var author = authors[aleaAu];
+
+						   arrayQuote.push(quote)
+						   arrayAuthor.push(author)
+						   i++
+						}
+
+							$('.container_quote1').removeClass("hide");
+							$('.container_quote2').removeClass("hide");
+							$('.container_quote3').removeClass("hide");
+							$('.container_quote4').removeClass("hide");
+							$('.container_quote5').addClass("hide");
+	
+							$('.quote1').html(arrayQuote[0]);
+							$('.quote2').html(arrayQuote[1]);
+							$('.quote3').html(arrayQuote[2]);
+							$('.quote4').html(arrayQuote[3]);
+							$('.author1').html(arrayAuthor[0]);
+							$('.author2').html(arrayAuthor[1]);
+							$('.author3').html(arrayAuthor[2]);
+							$('.author4').html(arrayAuthor[3]);
+
+	
+					}else{}
+	
+					if (userChose == 5){
+
+						document.getElementById("generate").innerHTML = "Generate another ? " + emojiBtn;
+						var arrayQuote = [];
+						var arrayAuthor = [];
+						var i = 0;
+						
+						while(i!=5){
+
+						   aleaQ1 = Math.floor(Math.random() * quotePart1.length);
+						   aleaQ2 = Math.floor(Math.random() * quotePart2.length);
+						   aleaQ3 = Math.floor(Math.random() * quotePart3.length);
+						   aleaAu = Math.floor(Math.random() * authors.length);
+						   var quote = quotePart1[aleaQ1] + " " + quotePart2[aleaQ2] + " " + quotePart3[aleaQ3];
+						   var author = authors[aleaAu];
+
+						   arrayQuote.push(quote)
+						   arrayAuthor.push(author)
+						   i++
+						}
+	
+							$('.container_quote1').removeClass("hide");
+							$('.container_quote2').removeClass("hide");
+							$('.container_quote3').removeClass("hide");
+							$('.container_quote4').removeClass("hide");
+							$('.container_quote5').removeClass("hide");
+	
+							
+							$('.quote1').html(arrayQuote[0]);
+							$('.quote2').html(arrayQuote[1]);
+							$('.quote3').html(arrayQuote[2]);
+							$('.quote4').html(arrayQuote[3]);
+							$('.quote5').html(arrayQuote[4]);
+							$('.author1').html(arrayAuthor[0]);
+							$('.author2').html(arrayAuthor[1]);
+							$('.author3').html(arrayAuthor[2]);
+							$('.author4').html(arrayAuthor[3]);
+							$('.author5').html(arrayAuthor[4]);
+
+					} else {
+	
+					}
+	
+	
+	
+				} else if (userChose <= 0) {
+					alert("Merci de choisir un nombre entre 1 et 5");
+					console.log("L'utilisateur a choisit un  nombre négaif");
+				} else {
+					alert("Merci de choisir un nombre entre 1 et 5");
+					console.log("L'utilisateur a choisit un mauvais nombre");
+				}
 			
 	});
+
 
 	$('.frflag').click(function(){
 		$(".UK").addClass("hide");

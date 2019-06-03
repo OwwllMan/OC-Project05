@@ -28,12 +28,19 @@ $('document').ready(function(){
 	$('#generer').click(function(){
 
 			userChose = input[0].value;
+
+			if (userChose < 1){
+				alert("Merci de choisir un nombre entre 1 et 5");
+			}else{}
+
+			if (userChose > 5){
+				alert("Merci de choisir un nombre entre 1 et 5");
+			}else{}
+
 			if ((userChose >= 1)  || (userChose <= 5)){
 
 				aleaBtn = Math.floor(Math.random() * emojiButton.length);
 				emojiBtn = emojiButton[aleaBtn];
-
-				console.log("L'utilisateur a choisit de générer " + userChose + " citation(s)");
 
 				if (userChose == 1){
 
@@ -207,9 +214,6 @@ $('document').ready(function(){
 	
 
 
-			} else if (userChose <= 0) {
-				alert("Merci de choisir un nombre entre 1 et 5");
-				console.log("L'utilisateur a choisit un  nombre négaif");
 			} else {
 				alert("Merci de choisir un nombre entre 1 et 5");
 				console.log("L'utilisateur a choisit un mauvais nombre");
@@ -220,6 +224,15 @@ $('document').ready(function(){
 			$('#generate').click(function(){
 				
 				userChose = input[1].value;
+
+				if (userChose < 1){
+					alert("Merci de choisir un nombre entre 1 et 5");
+				}else{}
+	
+				if (userChose > 5){
+					alert("Merci de choisir un nombre entre 1 et 5");
+				}else{}
+
 				if ((userChose >= 1)  || (userChose <= 5)){
 	
 					aleaBtn = Math.floor(Math.random() * emojiButton.length);
@@ -416,9 +429,6 @@ $('document').ready(function(){
 	
 	
 	
-				} else if (userChose <= 0) {
-					alert("Merci de choisir un nombre entre 1 et 5");
-					console.log("L'utilisateur a choisit un  nombre négaif");
 				} else {
 					alert("Merci de choisir un nombre entre 1 et 5");
 					console.log("L'utilisateur a choisit un mauvais nombre");
